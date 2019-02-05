@@ -1,5 +1,11 @@
 
 <div class="row pt-4">
+    <div id="description-panel" class="col-sm-3">
+      <abe-exercise-description
+        [description]="currentExercise.exercise.description"
+        [steps]="currentExercise.exercise.procedure">
+      </abe-exercise-description>
+    </div>
   <div id="exercise-pane" class="col-sm">
     <h1 class="text-center">{{currentExercise.exercise.title}}</h1>
     <div class="image-container row">
@@ -12,4 +18,7 @@
     </div>
     <h1>Time Remaining: {{currentExercise.duration-exerciseRunningDuration}}</h1>
   </div>
+</div>
+<div id="video-panel" class="row pt-4">
+  <abe-video-player [videos]="currentExercise.exercise.videos"></abe-video-player>
 </div>

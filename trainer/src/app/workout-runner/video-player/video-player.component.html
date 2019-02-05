@@ -1,0 +1,10 @@
+<div class="card">
+    <h4 class="card-header">Videos</h4>
+  <div class="card-body">
+    <div class="row pt-4">
+      <div *ngFor="let video of safeVideoUrls">
+          <iframe  width={{198*1.5}} height={{132*1.5}} [src]="video" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>  
+  </div>
+</div>
